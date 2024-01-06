@@ -7,7 +7,9 @@ const port = 3000;
 const folderPath = './textfiles'; // Change this to your desired folder path
 
 app.use(express.json());
-
+app.get('/', (req, res) => {
+  res.send('Welcome to text file creation projet via file system')
+})
 // Endpoint to create a text file with the current timestamp
 app.get("/createfile", (req, res) => {
     const currentDate = new Date();
